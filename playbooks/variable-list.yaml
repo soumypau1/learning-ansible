@@ -1,0 +1,24 @@
+---
+- hosts: linux
+  vars:
+    teams:
+      - csk
+      - kkr
+      - mi
+    Teams: [rcb, rr]
+  tasks:
+  - name: print single values
+    debug:
+      msg="{{ teams[0] }}"
+  - name: print all value
+    debug:
+      msg="{{ item }}"
+    with_items:
+      - "{{ teams }}"
+  - name: print all value from capital Team
+    debug:
+      msg="{{ item }}"
+    with_items:
+      - "{{ Teams }}"
+
+        

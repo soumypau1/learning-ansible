@@ -1,0 +1,7 @@
+---
+- hosts: centos
+  tasks:
+  - name: use host variable
+    debug:
+      msg: "http port is {{ http_port }}"
+  
