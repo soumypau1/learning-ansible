@@ -1,7 +1,9 @@
 ---
-- hosts: centos
+- hosts: linux
   tasks:
   - name: use host variable
     debug:
       msg: "http port is {{ http_port }}"
-  
+  - name: print group vars
+    debug:
+      msg: "group port number is {{ port }}"  
