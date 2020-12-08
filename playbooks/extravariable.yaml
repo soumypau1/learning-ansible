@@ -8,4 +8,4 @@
     user: 
       name: "{{ username }}"
       state: present
-      shell: /bin/bash
+      shell: "{{ shell }}"
